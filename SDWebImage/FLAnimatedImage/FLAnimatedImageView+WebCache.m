@@ -123,14 +123,14 @@ static inline FLAnimatedImage * SDWebImageCreateFLAnimatedImage(FLAnimatedImageV
                            if (!strongSelf) {
                                return;
                            }
-                           // Step 1. Check memory cache (associate object)
-                           FLAnimatedImage *associatedAnimatedImage = image.sd_FLAnimatedImage;
-                           if (associatedAnimatedImage) {
-                               // Asscociated animated image exist
-                               strongSelf.animatedImage = associatedAnimatedImage;
-                               strongSelf.image = nil;
-                               return;
-                           }
+//                           // Step 1. Check memory cache (associate object)
+//                           FLAnimatedImage *associatedAnimatedImage = image.sd_FLAnimatedImage;
+//                           if (associatedAnimatedImage) {
+//                               // Asscociated animated image exist
+//                               strongSelf.animatedImage = associatedAnimatedImage;
+//                               strongSelf.image = nil;
+//                               return;
+//                           }
                            // Step 2. Check if original compressed image data is "GIF"
                            BOOL isGIF = (image.sd_imageFormat == SDImageFormatGIF || [NSData sd_imageFormatForImageData:imageData] == SDImageFormatGIF);
                            if (!isGIF) {
